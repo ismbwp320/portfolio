@@ -2,7 +2,7 @@ function Application() {
   return (
     <div className="App">
       <header className="App-header">
-        Learn React
+        React Learning with Frontendmasters
       </header>
     </div>
   );
