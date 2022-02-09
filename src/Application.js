@@ -1,22 +1,22 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home';
-import Launch from './pages/Launch';
-import LaunchIndex from './pages/LaunchIndex';
+import Articles from './pages/Articles';
+import Projects from './pages/Projects';
+import Header from './components/Header';
 
 function Application() {
   return (
-    <Router>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="launch">Launch</Link>
-      </nav>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='launch' element={<Launch />}>
-          <Route path=':id' element={<LaunchIndex />} />
-        </Route>
-      </Routes>
-    </Router>
+    <div className='application-wrapper'>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='blog' element={<Articles />} />
+          <Route path='projects' element={<Projects />} />
+        </Routes>
+        <footer>Footer</footer>
+      </Router>
+    </div>
   );
 }
 

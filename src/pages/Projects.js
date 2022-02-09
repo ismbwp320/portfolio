@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom'
 
-function Launch() {
+function Projects() {
     return (
         <div className="launch">
-            Launch Page
+            Projects Page
             <Outlet></Outlet>
         </div>
     );
 }
 
-export default Launch;
+export default Projects;

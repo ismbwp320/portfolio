@@ -1,38 +1,114 @@
+:root {
+  --fonts-default: 'Karla', sans-serif;
+  --fontSizes-base: 1rem;
+  --colors-background: #fff;
+  --colors-bgPrimary: hsl(193 99.0% 94.7%);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--fontSizes-base);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-
-nav {
-  background: #cfd8dc;
-  padding: 10px;
+.application-wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0px, 1fr);
 }
-
-nav a {
-  display: inline-block;
-  padding: 5px;
+.header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: var(--colors-background);
 }
-
-a {
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+.logo {
+  font-family: var(--fonts-default);
+  display: flex;
+  outline-offset: .5rem;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: hsl(50 6.0% 10.0%);
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: pre;
   text-decoration: none;
 }
-
-ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 400px;
+.header nav > ul {
+  font-family: var(--fonts-default);
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: .75rem;
+}
+.header nav > ul a{
+    display: block;
+    padding: .25rem;
+    color: hsl(50 6.0% 10.0%);
+    font-size: 1.125rem;
+    text-decoration: none;
+    outline-offset: 25rem;
 }
 
-img {
+/* Home Page CSS*/
+
+.bg-primary {
+    background-color: var(--colors-bgPrimary);
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.home-banner {
+  text-align: center;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.banner-content {
+  font-family: var(--fonts-default);
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;
+  padding: 2rem 0;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.name {
+  font-size: 3.75rem;
+  color: hsl(50 6.0% 10.0%);
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+.description {
+  width: 32rem;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:1.5rem;
+  color: hsl(50 6.0% 10.0%);
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
