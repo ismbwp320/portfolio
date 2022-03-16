@@ -6,7 +6,7 @@ function Home() {
           <div className="py-4 banner-content">
             <div className="my-auto">
               <div className="info">
-                <p className="name">Hey, I'm Ismail</p>
+                <p className="name">Hey, I'm Ismail.</p>
                 <p className="description">I'm an experienced Frontend Developer based in Bahawalpur, Pakistan. I love coding, writing and 🐈</p>
               </div>
             </div>
